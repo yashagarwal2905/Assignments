@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<h1>Departments</h1>
+@{
+    <ul>
+        @foreach (string dept in @ViewBag.DepartmentDetails)
+        {
+            <li><a asp-controller="Employee" asp-action="EmpsByDept" asp-route-id="@dept">@dept</a></li>
+        }
+    </ul>
+}
